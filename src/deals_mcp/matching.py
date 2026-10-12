@@ -82,7 +82,8 @@ def match_level(query: str, title: str) -> str:
         return "weak"
     if _compact(query, MULTI_LETTER_NUMERALS) == _compact(title, MULTI_LETTER_NUMERALS):
         return "exact"
-    if "".join(query_words) == "".join(title_words) or "".join(query_words) == _compact(strip_suffix(title)):
+    joined_query = "".join(query_words)
+    if joined_query == "".join(title_words) or joined_query == _compact(strip_suffix(title)):
         return "variant"
     if title_words[: len(query_words)] == query_words:
         return "starts_with"

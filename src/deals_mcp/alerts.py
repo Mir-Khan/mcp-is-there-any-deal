@@ -217,7 +217,8 @@ async def run_alerts(db_path: str, itad: ITADClient, send: Sender | None, now: d
     # since a failed request says nothing about whether the sale is still on.
     on_sale = {d["game_id"] for d in report["deals"]}
     unchecked = {g["game_id"] for g in summary["not_checked"]}
-    await db.forget_alerts(db_path, [i["game_id"] for i in items if i["game_id"] not in on_sale | unchecked])
+    keep = on_sale | unchecked
+    await db.forget_alerts(db_path, [i["game_id"] for i in items if i["game_id"] not in keep])
     await db.forget_alerts_for_removed_games(db_path)
     return summary
 

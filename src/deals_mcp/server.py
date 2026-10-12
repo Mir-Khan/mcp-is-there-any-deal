@@ -5,16 +5,17 @@ import logging
 import os
 import sys
 import time
+from collections import Counter
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 from dataclasses import dataclass
 from typing import Annotated, Any, Literal
 
 import aiohttp
-from pydantic import BeforeValidator, Field, create_model
 from mcp.server.mcpserver import AcceptedElicitation, Context, Elicit, ElicitationResult, MCPServer, Resolve
 from mcp.server.mcpserver.exceptions import ResourceNotFoundError, ToolError
 from mcp_types import ToolAnnotations
+from pydantic import BeforeValidator, Field, create_model
 
 from deals_mcp import db, deal_check
 from deals_mcp.config import get_country, get_db_path, load_env
@@ -45,6 +46,7 @@ Price = Annotated[float, Field(ge=0)]
 
 # The most choices to show in a clarification form, since a longer list is hard to pick from.
 MAX_CHOICES = 8
+
 
 class SearchCache:
     """Keeps recent ITAD search results for a few minutes.
@@ -167,13 +169,13 @@ def choice_labels(choices: list[dict], slugs: dict[str, str | None]) -> dict[str
         kind = r["type"] or "other"
         return f"{r['title']} ({kind}, {detail})" if detail else f"{r['title']} ({kind})"
 
-    counts: dict[str, int] = {}
-    for r in choices:
-        counts[label(r)] = counts.get(label(r), 0) + 1
+    counts = Counter(label(r) for r in choices)
 
     labels = {}
     for r in choices:
-        text = label(r) if counts[label(r)] == 1 else label(r, slugs.get(r["game_id"]) or r["game_id"][:8])
+        text = label(r)
+        if counts[text] > 1:
+            text = label(r, slugs.get(r["game_id"]) or r["game_id"][:8])
         if text in labels:
             text = label(r, r["game_id"])
         labels[text] = r
@@ -284,12 +286,13 @@ async def get_historical_low(game_id: GameId, ctx: Context, country: Country | N
             "timestamp": entry.get("timestamp"),
         }
 
+    game = prices[0]
     return {
         "game_id": game_id,
         "country": country,
-        "historical_low": flatten(prices[0].get("lowest")),
-        "current_best": flatten(prices[0].get("current")),
-        "bundled_count": prices[0].get("bundled", 0),
+        "historical_low": flatten(game.get("lowest")),
+        "current_best": flatten(game.get("current")),
+        "bundled_count": game.get("bundled", 0),
     }
 
 
