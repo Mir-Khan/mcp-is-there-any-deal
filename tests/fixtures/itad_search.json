@@ -1,0 +1,1565 @@
+{
+ "Final Fantasy": [
+  {
+   "id": "018d937f-228e-7233-9b1b-1389c0b3a1e3",
+   "title": "FINAL FANTASY XV WINDOWS EDITION",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-5b12-7380-a77e-8754efb603d0",
+   "title": "FINAL FANTASY VII REMAKE INTERGRADE",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-3812-738e-8b05-863b60789146",
+   "title": "FINAL FANTASY X/X-2 HD Remaster",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-0120-723c-be2b-6037706890d2",
+   "title": "FINAL FANTASY XIII",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-0c9d-70bc-876a-059b7cc75207",
+   "title": "FINAL FANTASY IX",
+   "type": "game"
+  },
+  {
+   "id": "0190378e-1a64-720e-8971-4595157e24f3",
+   "title": "FINAL FANTASY VII REBIRTH",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-0c79-7287-a46c-67c271e0c562",
+   "title": "FINAL FANTASY XII THE ZODIAC AGE",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-03f0-7096-8860-582bb708c15a",
+   "title": "LIGHTNING RETURNS: FINAL FANTASY XIII",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-0fdf-700c-af70-cc63abb6e5ca",
+   "title": "FINAL FANTASY VIII",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-2b34-7176-9cae-282b080f88bf",
+   "title": "FINAL FANTASY XIII-2",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-2112-72ca-b030-08cbc05c433b",
+   "title": "FINAL FANTASY VI",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-6be0-706c-8cd9-b37e064b146f",
+   "title": "Final Fantasy XVI",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-07e5-703c-bd73-80c94796424f",
+   "title": "FINAL FANTASY XIV Online",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-64be-71f1-9143-aa284c437208",
+   "title": "CRISIS CORE -FINAL FANTASY VII- REUNION",
+   "type": "game"
+  },
+  {
+   "id": "019740d2-6ed6-7129-b13b-e5561c38765e",
+   "title": "Final Fantasy Tactics - The Ivalice Chronicles",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-1b6e-7034-8bfb-5f03787f8478",
+   "title": "FINAL FANTASY IV",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-5c2a-728c-83d5-2851b99cb8ae",
+   "title": "Final Fantasy III (3D Remake)",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-1002-71b2-a13d-6b968919e04f",
+   "title": "FINAL FANTASY V",
+   "type": "game"
+  },
+  {
+   "id": "019c90a6-0426-7210-b2ff-e62f6470d830",
+   "title": "FINAL FANTASY VII",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-27eb-720b-97d4-8481ce76842f",
+   "title": "FINAL FANTASY VIII - REMASTERED",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-00b3-7298-bae5-ceb509cb119c",
+   "title": "FINAL FANTASY TYPE-0 HD",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-574a-72e8-b7f1-f59119c92069",
+   "title": "STRANGER OF PARADISE FINAL FANTASY ORIGIN",
+   "type": "game"
+  },
+  {
+   "id": "018d937e-ff95-71b8-b5a4-48f3c3e1ec2f",
+   "title": "World Of Final Fantasy™",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-5233-732a-9727-ab9b4d72c304",
+   "title": "FINAL FANTASY",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-170e-7337-93ec-0b1d7ca6d2ff",
+   "title": "Final Fantasy III",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-5c2a-728c-83d5-2851ba4e9fde",
+   "title": "Final Fantasy IV (3D Remake)",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-5233-732a-9727-ab9b4f7b1689",
+   "title": "FINAL FANTASY II",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-2e5a-7282-92f3-bdc0eed7242c",
+   "title": "FINAL FANTASY IV: The After Years",
+   "type": "game"
+  },
+  {
+   "id": "019eace6-2be3-7223-bb8d-02e903b4da6a",
+   "title": "FINAL FANTASY RESONANCE",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-15fa-72fb-855c-7304e96f081f",
+   "title": "DISSIDIA FINAL FANTASY NT Free Edition",
+   "type": "game"
+  },
+  {
+   "id": "019eb7ae-de18-7335-b0b1-98a3cca77495",
+   "title": "FINAL FANTASY VII REVELATION",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-2488-72fe-96f6-cc7573e66e78",
+   "title": "FINAL FANTASY® XV - Episode Ardyn",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-4b31-70b4-a7a4-e3d1e1c4b556",
+   "title": "COLLECTION of SaGa FINAL FANTASY LEGEND",
+   "type": "game"
+  },
+  {
+   "id": "018d937e-ff8e-7271-ae44-d9252d7c6105",
+   "title": "FINAL FANTASY XI Ultimate Collection: Seekers Edition",
+   "type": "game"
+  },
+  {
+   "id": "01916b5e-5b20-714f-b1bf-71dc21388ebf",
+   "title": "FINAL FANTASY XVI COMPLETE EDITION",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-0e03-7126-be47-64ed1fe2f5be",
+   "title": "WORLD OF FINAL FANTASY™ MAXIMA Upgrade",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-5d98-7311-98d6-1098f4c93efa",
+   "title": "FINAL FANTASY I-VI Bundle",
+   "type": "package"
+  },
+  {
+   "id": "018d937f-7675-7132-8ba9-b232756e9218",
+   "title": "FINAL FANTASY XIV: Dawntrail",
+   "type": "dlc"
+  },
+  {
+   "id": "01916b6c-0c73-7025-9683-5efa6c67efaf",
+   "title": "FINAL FANTASY XVI Expansion Pass",
+   "type": "dlc"
+  },
+  {
+   "id": "01916b6c-0c43-700f-a613-7d00bd687a19",
+   "title": "FINAL FANTASY XVI The Rising Tide",
+   "type": "dlc"
+  },
+  {
+   "id": "01916b6c-0c2a-7324-85c9-5c2b449e0264",
+   "title": "FINAL FANTASY XVI Echoes of the Fallen",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937e-f816-7088-9ee2-47f3c8240bb8",
+   "title": "FINAL FANTASY XIV Online Complete Edition",
+   "type": "package"
+  },
+  {
+   "id": "018d937f-6c9d-70bd-b1b7-b4278533e816",
+   "title": "STRANGER OF PARADISE FINAL FANTASY ORIGIN - Season Pass",
+   "type": "dlc"
+  },
+  {
+   "id": "018d9581-2487-70d3-b664-964c25089021",
+   "title": "FINAL FANTASY IV Bundle (3D Remake)",
+   "type": "package"
+  },
+  {
+   "id": "018d937f-0898-738c-90be-2da155214caf",
+   "title": "FINAL FANTASY XV EPISODE ARDYN COMPLETE EDITION",
+   "type": "package"
+  },
+  {
+   "id": "0193be58-5b28-7234-9d0f-4b1b2170a778",
+   "title": "FINAL FANTASY VII REBIRTH Digital Deluxe Edition Upgrade",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6c9d-70bd-b1b7-b427862c66ce",
+   "title": "STRANGER OF PARADISE FINAL FANTASY ORIGIN - Deluxe Upgrade",
+   "type": "package"
+  },
+  {
+   "id": "019740d2-7244-70ba-8468-57bb5fe124d2",
+   "title": "Final Fantasy Tactics - The Ivalice Chronicles: Deluxe Edition",
+   "type": "game"
+  },
+  {
+   "id": "0193be4a-a5a2-71bc-91fa-f7a2e4d26dbb",
+   "title": "FINAL FANTASY VII REBIRTH Digital Deluxe Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-6c9d-70bd-b1b7-b4278684c1b6",
+   "title": "STRANGER OF PARADISE FINAL FANTASY ORIGIN - Deluxe Edition",
+   "type": "game"
+  }
+ ],
+ "final fantasy 7": [
+  {
+   "id": "018d937f-5b12-7380-a77e-8754efb603d0",
+   "title": "FINAL FANTASY VII REMAKE INTERGRADE",
+   "type": "game"
+  },
+  {
+   "id": "0190378e-1a64-720e-8971-4595157e24f3",
+   "title": "FINAL FANTASY VII REBIRTH",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-0fdf-700c-af70-cc63abb6e5ca",
+   "title": "FINAL FANTASY VIII",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-64be-71f1-9143-aa284c437208",
+   "title": "CRISIS CORE -FINAL FANTASY VII- REUNION",
+   "type": "game"
+  },
+  {
+   "id": "019c90a6-0426-7210-b2ff-e62f6470d830",
+   "title": "FINAL FANTASY VII",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-27eb-720b-97d4-8481ce76842f",
+   "title": "FINAL FANTASY VIII - REMASTERED",
+   "type": "game"
+  },
+  {
+   "id": "019eb7ae-de18-7335-b0b1-98a3cca77495",
+   "title": "FINAL FANTASY VII REVELATION",
+   "type": "game"
+  },
+  {
+   "id": "0193be58-5b28-7234-9d0f-4b1b2170a778",
+   "title": "FINAL FANTASY VII REBIRTH Digital Deluxe Edition Upgrade",
+   "type": "dlc"
+  },
+  {
+   "id": "0193be4a-a5a2-71bc-91fa-f7a2e4d26dbb",
+   "title": "FINAL FANTASY VII REBIRTH Digital Deluxe Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-64be-71f1-9143-aa284c67bb1d",
+   "title": "CRISIS CORE -FINAL FANTASY VII- REUNION -DIGITAL DELUXE EDITION",
+   "type": "game"
+  },
+  {
+   "id": "01a0679f-ba4b-7161-8ac0-a49606c257fe",
+   "title": "FINAL FANTASY VII Remake Series Trilogy Edition",
+   "type": "package"
+  },
+  {
+   "id": "018e7680-b336-7055-8e60-703637ce6d5d",
+   "title": "CRISIS CORE -FINAL FANTASY VII- REUNION Digital Contents",
+   "type": "dlc"
+  },
+  {
+   "id": "01a0679f-cfe5-7096-bd4b-35fe8cd983c2",
+   "title": "FINAL FANTASY VII REVELATION Story Expansion Pass",
+   "type": "dlc"
+  },
+  {
+   "id": "01949151-7688-70c9-890e-53562446ae8c",
+   "title": "FINAL FANTASY VII REBIRTH Original Soundtrack",
+   "type": null
+  },
+  {
+   "id": "01949151-7523-726a-83be-81d5ce19a3f3",
+   "title": "FINAL FANTASY VII REMAKE INTERGRADE Original Soundtrack",
+   "type": null
+  },
+  {
+   "id": "01949151-7517-72f4-a3fd-4e6b355b43d8",
+   "title": "FINAL FANTASY VII REMAKE Original Soundtrack Plus",
+   "type": null
+  },
+  {
+   "id": "01949151-7509-7246-8069-0dcf2f1292e4",
+   "title": "FINAL FANTASY VII REMAKE Original Soundtrack",
+   "type": null
+  },
+  {
+   "id": "01949151-7533-72b3-8f1e-f3e27ae897b2",
+   "title": "FINAL FANTASY VIII Original Soundtrack",
+   "type": null
+  },
+  {
+   "id": "01a0679f-d7d2-73c3-99fe-9db5cd44e983",
+   "title": "FINAL FANTASY VII REVELATION Premium Plus Edition",
+   "type": "game"
+  },
+  {
+   "id": "01a0679f-d7d0-7372-b222-91509a1c7674",
+   "title": "FINAL FANTASY VII REVELATION Premium Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d937e-f9f2-70e7-b6de-498c2f67eb9e",
+   "title": "Final Fantasy Power Pack (III + IV + VII + VIII + XIII)",
+   "type": null
+  },
+  {
+   "id": "019e31e9-1ea5-7224-8569-29cd04628b17",
+   "title": "FINAL FANTASY VII REMAKE INTERGRADE Digital Deluxe Edition",
+   "type": null
+  },
+  {
+   "id": "019d4484-72a1-701d-9fa6-d3a16ed101cc",
+   "title": "FINAL FANTASY VII REBIRTH Original Soundtrack Plus",
+   "type": null
+  },
+  {
+   "id": "019ce2ab-8b54-7190-b0ad-7df2b4dc20b9",
+   "title": "Piano Collections FINAL FANTASY VII",
+   "type": null
+  },
+  {
+   "id": "019c0f88-07a2-71c2-bbdb-b1f42f5acfec",
+   "title": "FINAL FANTASY VII Original Soundtrack",
+   "type": null
+  },
+  {
+   "id": "019c0f88-079d-7099-90ed-dcf500e51068",
+   "title": "FINAL FANTASY VII REBIRTH ACOUSTIC ARRANGEMENTS",
+   "type": null
+  },
+  {
+   "id": "019c0f88-0799-70b6-b076-f832cc60bb1e",
+   "title": "FINAL FANTASY VII REBIRTH Orchestra World Tour LIVE 2024.09.08",
+   "type": null
+  },
+  {
+   "id": "019c0f88-0795-7118-814b-aa5ff9492829",
+   "title": "FINAL FANTASY VII REBIRTH Orchestral Arrangement Album",
+   "type": null
+  },
+  {
+   "id": "019c0f88-0793-7239-bf10-dbf28281b2c6",
+   "title": "FINAL FANTASY VII REMAKE ACOUSTIC ARRANGEMENTS",
+   "type": null
+  },
+  {
+   "id": "019c0f88-0783-73d0-90fd-71256c322ea5",
+   "title": "FINAL FANTASY VII REMAKE Orchestral Arrangement Album",
+   "type": null
+  },
+  {
+   "id": "019bff53-90a2-7073-ab50-0ec54a249f89",
+   "title": "【Limited early purchase edition】 FINAL FANTASY VII REMAKE INTERGRADE Digital Deluxe Edition",
+   "type": null
+  },
+  {
+   "id": "019bf16e-fc3d-726a-b95d-fa2facfc0a1f",
+   "title": "【Limited early purchase edition】 FINAL FANTASY VII REMAKE INTERGRADE",
+   "type": null
+  },
+  {
+   "id": "0193c104-ec78-7350-9e8f-960249f5bdb2",
+   "title": "FINAL FANTASY VII REBIRTH Deluxe Upgrade",
+   "type": "dlc"
+  },
+  {
+   "id": "018dc307-04ef-734e-9fd0-47fc8aa39ede",
+   "title": "Final Fantasy VII Rebirth Digital Deluxe Edition - PS5",
+   "type": "dlc"
+  },
+  {
+   "id": "018dc307-04e2-7214-9727-d331d386324c",
+   "title": "Final Fantasy VII Rebirth - Pacote Duplo Digital Deluxe - PS5",
+   "type": "dlc"
+  },
+  {
+   "id": "018dc307-04d1-7291-8336-70048618b4cc",
+   "title": "Final Fantasy VII Rebirth - Pacote Duplo - PS5",
+   "type": "dlc"
+  },
+  {
+   "id": "01a0a598-077a-71e9-bad9-f6bbcc256be8",
+   "title": "TRAIL TO THE HEAVENS: FINAL FANTASY XIV Original Soundtrack (78 Track Version)",
+   "type": null
+  },
+  {
+   "id": "019ce2ab-8b55-73e4-bc92-45afb4dd84cb",
+   "title": "Piano Collections FINAL FANTASY VIII",
+   "type": null
+  },
+  {
+   "id": "01a086d9-441a-7360-b25e-1a056c293e93",
+   "title": "FINAL FANTASY VII Remake Trilogy Edition",
+   "type": null
+  },
+  {
+   "id": "019d69e6-953c-707b-a217-1d15ee33f9b6",
+   "title": "Super Detonado PLAY Games - Final Fantasy VII Rebirth",
+   "type": null
+  }
+ ],
+ "Resident Evil 4": [
+  {
+   "id": "018d937f-6b99-7077-9cf6-eacfce97587f",
+   "title": "Resident Evil 4 (2005)",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-74c1-708e-8193-97dfbe6a98fe",
+   "title": "Resident Evil 4 (2023)",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-1e79-7333-8ea9-c077b9121751",
+   "title": "Resident Evil 4 Ultimate HD Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-751c-72ae-af51-cc2ae4a8726f",
+   "title": "Resident Evil 4 - Separate Ways",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6c9f-720e-85fb-da2c0428a2bb",
+   "title": "Resident Evil 4 - The Mercenaries",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6bed-737d-b6d8-9bf0b066b63b",
+   "title": "Resident Evil 4 Treasure Map: Expansion",
+   "type": "dlc"
+  },
+  {
+   "id": "018f084f-a7d1-7026-ba37-f11927b55307",
+   "title": "Resident Evil 4 (2023) - Gold Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-6bee-71a1-89df-c91a7026c2b4",
+   "title": "Resident Evil 4 Deluxe Weapon: 'Skull Shaker'",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6bee-71a1-89df-c91a6f3c9598",
+   "title": "Resident Evil 4 Deluxe Weapon: 'Sentinel Nine'",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6bee-71a1-89df-c91a6e486b15",
+   "title": "Resident Evil 4 Leon Accessory: 'Sunglasses (Sporty)'",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6bee-71a1-89df-c91a6d3cc51a",
+   "title": "Resident Evil 4 'Original Ver.' Soundtrack Swap",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6bee-71a1-89df-c91a6d3b63ac",
+   "title": "Resident Evil 4 Leon Costume & Filter: 'Hero'",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6bed-737d-b6d8-9bf0b165ad50",
+   "title": "Resident Evil 4 Leon & Ashley Costumes: 'Casual'",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6bed-737d-b6d8-9bf0b118196d",
+   "title": "Resident Evil 4 Leon Costume & Filter: 'Villain'",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6bed-737d-b6d8-9bf0af7f6115",
+   "title": "Resident Evil 4 Leon & Ashley Costumes: 'Romantic'",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-32cf-736d-a8fb-0e2a4b3b3d4c",
+   "title": "Resident Evil 0 Costume Pack 4",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-716f-7110-98f1-10d510c119c1",
+   "title": "Resident Evil 4 Charm: 'Handgun Ammo'",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-716f-7110-98f1-10d50e883843",
+   "title": "Resident Evil 4 Attaché Case: 'Gold'",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-716f-7110-98f1-10d51039862e",
+   "title": "Resident Evil 4 Charm: 'Green Herb'",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-716f-7110-98f1-10d50f560a77",
+   "title": "Resident Evil 4 Attaché Case: 'Classic'",
+   "type": "dlc"
+  },
+  {
+   "id": "01924377-13eb-7254-8c51-f8005d25a6c2",
+   "title": "Resident Evil 4 (2005) & Resident Evil 5 Gold Edition Double Pack",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-6ba4-707d-94c6-ae3a920df11d",
+   "title": "Resident Evil 4 Chainsaw Demo",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-7593-70f9-9067-5c3cc0d29776",
+   "title": "Resident Evil 4 Original Soundtrack",
+   "type": null
+  },
+  {
+   "id": "018d937f-6ca0-734c-ba11-eb9adacb361d",
+   "title": "Resident Evil 4 Weapon Exclusive Upgrade Ticket x5 (A)",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6ca0-734c-ba11-eb9ad9d5b0ca",
+   "title": "Resident Evil 4 Weapon Exclusive Upgrade Ticket x3 (D)",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6ca0-734c-ba11-eb9ad9292ffb",
+   "title": "Resident Evil 4 Weapon Exclusive Upgrade Ticket x3 (C)",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6ca0-734c-ba11-eb9ad88e6fdb",
+   "title": "Resident Evil 4 Weapon Exclusive Upgrade Ticket x3 (B)",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6ca0-734c-ba11-eb9ad791914f",
+   "title": "Resident Evil 4 Weapon Exclusive Upgrade Ticket x1 (F)",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6ca0-734c-ba11-eb9ad6bc2751",
+   "title": "Resident Evil 4 Weapon Exclusive Upgrade Ticket x3 (A)",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6ca0-734c-ba11-eb9ad5dcac7d",
+   "title": "Resident Evil 4 Weapon Exclusive Upgrade Ticket x1 (E)",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6c9f-720e-85fb-da2c04ef782b",
+   "title": "Resident Evil 4 Weapon Exclusive Upgrade Ticket x1 (D)",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6c9f-720e-85fb-da2c04620e5e",
+   "title": "Resident Evil 4 Weapon Exclusive Upgrade Ticket x1 (A)",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6c9f-720e-85fb-da2c04459abc",
+   "title": "Resident Evil 4 Weapon Exclusive Upgrade Ticket x1 (B)",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6c9f-720e-85fb-da2c040496f3",
+   "title": "Resident Evil 4 Weapon Exclusive Upgrade Ticket x1 (C)",
+   "type": "dlc"
+  },
+  {
+   "id": "019badaf-0b5f-720b-891d-12cee7b6dc68",
+   "title": "Resident Evil: Revelations 2 - Episode 4: Metamorphosis",
+   "type": null
+  },
+  {
+   "id": "018d956b-282d-721a-b496-defb2324f097",
+   "title": "Resident Evil 4 - Xbox Series S|X",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-6bee-71a1-89df-c91a71216e9d",
+   "title": "Resident Evil 4 Extra DLC Pack",
+   "type": "package"
+  },
+  {
+   "id": "019eb6e5-00b9-717f-935a-b0b61dfcd4f2",
+   "title": "resident evil 4 (2005) Ultimate HD Edition",
+   "type": null
+  },
+  {
+   "id": "018d937f-7840-7329-8918-d690548fc554",
+   "title": "Super Detonado PLAY Games - Resident Evil 4",
+   "type": "dlc"
+  }
+ ],
+ "Halo": [
+  {
+   "id": "018d937f-1155-7183-9b7b-f4f3f65b7b11",
+   "title": "Halo: The Master Chief Collection",
+   "type": "package"
+  },
+  {
+   "id": "018d937f-4443-7255-babb-a2a153173131",
+   "title": "Halo Infinite",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-25ea-7195-afff-5c2904e607ac",
+   "title": "Halo: Spartan Assault",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-2b4f-70cd-bfdf-0dfaecf28d9b",
+   "title": "Halo Wars: Definitive Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-3aa4-70ce-a7f8-f766d6f6a9c1",
+   "title": "Halo: Reach",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-0e31-7291-90f7-030a63192a6f",
+   "title": "Halo 3",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-206b-7116-a860-da40b43874db",
+   "title": "Halo: Combat Evolved Anniversary",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-3aa4-70ce-a7f8-f766d75f6b81",
+   "title": "Halo 2: Anniversary",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-3aa4-70ce-a7f8-f766d7b56a5a",
+   "title": "Halo 3: ODST",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-2bee-71d8-97b2-18b2eb954af6",
+   "title": "Halo 4",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-330f-7041-9f96-a56c95aba639",
+   "title": "Halo: Spartan Strike",
+   "type": "game"
+  },
+  {
+   "id": "019a17ea-5d15-71da-8c36-5cec59faa34b",
+   "title": "Halo: Campaign Evolved",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-553d-710e-9ad1-918403cebc6c",
+   "title": "Halo Infinite (Campaign)",
+   "type": "package"
+  },
+  {
+   "id": "018d937f-1eb9-7064-a2e5-b43959c1c820",
+   "title": "Halo: Spartan Bundle",
+   "type": "package"
+  },
+  {
+   "id": "018d937f-3dbf-70cf-b790-8e3d4b0bc829",
+   "title": "Halo Beats!",
+   "type": "game"
+  },
+  {
+   "id": "018d97d6-be7f-7007-86ac-5c5ccbfb9a6f",
+   "title": "Halod's adventure times",
+   "type": "game"
+  },
+  {
+   "id": "018d937e-fa3e-7282-a82d-3e8d4deb2d57",
+   "title": "Halo Wars 2 Complete Edition",
+   "type": null
+  },
+  {
+   "id": "018d937f-03f2-7167-97c8-3f2d02a08d6c",
+   "title": "Halo Wars 2",
+   "type": null
+  },
+  {
+   "id": "019fa94b-8f10-7203-9e4f-cb9ddda067d2",
+   "title": "Alpha Halo Armory Pack - Halo: Campaign Evolved - Premium Edition",
+   "type": "dlc"
+  },
+  {
+   "id": "019f3fef-fbf6-73e9-a850-3ebce49c273a",
+   "title": "Hell o' Halo",
+   "type": "game"
+  },
+  {
+   "id": "019ea316-9654-7031-be1c-1715f8f1df99",
+   "title": "Halo: Campaign Evolved - Premium Edition",
+   "type": "game"
+  },
+  {
+   "id": "0198a711-4989-7281-8ce6-c933d6be4b7b",
+   "title": "Sun Halo",
+   "type": "game"
+  },
+  {
+   "id": "018ef242-761b-7340-93af-dffb8a5b298b",
+   "title": "Haloo",
+   "type": "game"
+  },
+  {
+   "id": "0191e08b-b957-7200-bf6d-4e2aa868c7f9",
+   "title": "Halo Wars 2 47 Blitz Packs",
+   "type": null
+  },
+  {
+   "id": "0191e08b-b935-71b6-8b70-da9fb1582211",
+   "title": "Halo Wars 2 23 Blitz Packs",
+   "type": null
+  },
+  {
+   "id": "0191e08b-b90d-71e9-a8d1-cb35798be895",
+   "title": "Halo Wars 2 10 Blitz Packs",
+   "type": null
+  },
+  {
+   "id": "019fa990-0990-7352-8534-21f5c48a1c41",
+   "title": "Foundry Armory Pack - Halo: Campaign Evolved",
+   "type": "dlc"
+  },
+  {
+   "id": "019fa94b-8f07-7239-a9e2-717ee17b4e8f",
+   "title": "Digital Story & Art Collection - Halo: Campaign Evolved",
+   "type": "dlc"
+  },
+  {
+   "id": "019f9e4c-5d7c-734e-897f-d3b21c9279e6",
+   "title": "Halo: Campaign Evolved - Premium Edition Upgrade",
+   "type": "dlc"
+  },
+  {
+   "id": "019c0220-2931-7232-8392-16793826fd3c",
+   "title": "HALO CAT + Cat Paw",
+   "type": "package"
+  },
+  {
+   "id": "0198c434-801b-7347-9879-2a4b254f25e8",
+   "title": "Halo: Collateral Damage",
+   "type": null
+  },
+  {
+   "id": "0198c1a1-d1c1-73c5-b467-5a613b972a75",
+   "title": "Halo Encyclopedia",
+   "type": null
+  },
+  {
+   "id": "0198c1a1-d1b5-71c8-a4e3-5c1e20ff78ed",
+   "title": "Halo: Legacy Collection",
+   "type": null
+  },
+  {
+   "id": "0198c1a1-d19c-7215-aa84-fd57352e7918",
+   "title": "Halo: Lone Wolf",
+   "type": null
+  },
+  {
+   "id": "0198c1a1-d18b-70da-9fa3-030759f90bf5",
+   "title": "Halo: Tales from Slipspace",
+   "type": null
+  },
+  {
+   "id": "0198c1a1-d17f-71e4-ae08-87d438ea632a",
+   "title": "Halo: Rise of Atriox",
+   "type": null
+  },
+  {
+   "id": "0198c1a1-d160-700d-9313-c56d1683372d",
+   "title": "The Art of Halo Infinite",
+   "type": null
+  },
+  {
+   "id": "0198c1a1-d127-711e-b16a-5ff328fec717",
+   "title": "Halo Graphic Novel (New Edition)",
+   "type": null
+  },
+  {
+   "id": "0198c1a1-d114-70b9-b759-7330f2711ef8",
+   "title": "Halo: Fall of Reach",
+   "type": null
+  },
+  {
+   "id": "018d937f-120b-70f5-8697-75ff77ee2feb",
+   "title": "Halo: Initiation",
+   "type": null
+  },
+  {
+   "id": "0197f194-79ea-73f9-addd-675d31baaa97",
+   "title": "Hypno Halo",
+   "type": "game"
+  },
+  {
+   "id": "01962fff-4c6d-70d7-aa96-5988520e6736",
+   "title": "Frostbite Frenzy - Halo Hat",
+   "type": "dlc"
+  },
+  {
+   "id": "01932131-464e-71dd-b192-2f0d505a1870",
+   "title": "Halo Wars 2: 3 Blitz Packs",
+   "type": null
+  },
+  {
+   "id": "01932131-463d-727f-81bd-907f962b5710",
+   "title": "Halo Wars 2: 40 Blitz Packs + 7 Free",
+   "type": null
+  },
+  {
+   "id": "01932131-4626-7319-ba34-701c811c4d4c",
+   "title": "Halo Wars 2: 100 Blitz Packs + 35 Free",
+   "type": null
+  },
+  {
+   "id": "01932131-4613-71c1-965e-d28e6727ab63",
+   "title": "Halo Wars 2: 9 Blitz Packs + 1 Free",
+   "type": null
+  },
+  {
+   "id": "018d937f-2225-7325-9e43-4f89c2af58dc",
+   "title": "Halo Wars 2: 20 Blitz Packs + 3 Free",
+   "type": null
+  },
+  {
+   "id": "018d937f-1240-7290-aa55-f5a7531b705f",
+   "title": "Halo Wars 2: Icons of War",
+   "type": null
+  },
+  {
+   "id": "018d937f-00e5-71cf-adc1-6c971ee3be1e",
+   "title": "Halo Wars 2: Serina & Spearbreaker Bundle",
+   "type": null
+  },
+  {
+   "id": "018d937e-fec1-722f-8812-744a34981fb2",
+   "title": "Halo Wars 2: Custom WarPaint",
+   "type": null
+  }
+ ],
+ "Doom": [
+  {
+   "id": "018d937e-fce8-716b-97f3-6a41f82bb9e7",
+   "title": "DOOM",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-08a6-7233-9599-69a9ea886bd9",
+   "title": "DOOM Eternal",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-089f-73ea-b66e-3167274fdfe7",
+   "title": "DOOM 3",
+   "type": "game"
+  },
+  {
+   "id": "018ffe30-0af1-701c-b71a-24ca5e3c0d05",
+   "title": "DOOM: The Dark Ages",
+   "type": "game"
+  },
+  {
+   "id": "019132ba-b52a-73d1-aedc-54adf3cd6f13",
+   "title": "DOOM + DOOM II",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-045f-70ea-8aac-2763a0597fae",
+   "title": "Deponia Doomsday",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-3faa-73e8-877f-4665f1f08f20",
+   "title": "DOOM 64",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-32ee-73ad-8fd8-d0df46e466ff",
+   "title": "Deep Dungeons of Doom",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-0608-732b-aca9-53afc382be67",
+   "title": "Akalabeth: World of Doom",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-0e66-7289-9cc8-d7314f297b24",
+   "title": "Doomdark's Revenge",
+   "type": "game"
+  },
+  {
+   "id": "018d937e-f9d9-71dc-a74e-41773432a8f3",
+   "title": "DOOM VFR",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-4843-73fd-8aef-c8039d4cea58",
+   "title": "DOOM Eternal: The Ancient Gods - Part One",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-4d08-72b2-a613-79f3ee0d1f3b",
+   "title": "DOOM Eternal: The Ancient Gods - Part Two",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-3fea-738f-8787-17ee0b2e9701",
+   "title": "DOOM Eternal - Year One Pass",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-05d7-70bc-a15f-8c813525f51c",
+   "title": "DOOM Eternal - Deluxe Edition",
+   "type": "package"
+  },
+  {
+   "id": "018d937e-fa0d-72dc-8d18-4b7289867b78",
+   "title": "Doom & Destiny",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-6a20-71ce-bcdf-cffe44fa1a4a",
+   "title": "DOOMBLADE",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-4efe-707f-9755-81128bce8114",
+   "title": "Atomicrops: Doom & Bloom",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937e-f015-7181-b547-7e0a9ce20b17",
+   "title": "The Forest of Doom",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-35b2-71c8-9fb9-c7f08e9f50fa",
+   "title": "Road Doom",
+   "type": "game"
+  },
+  {
+   "id": "018d96d0-fd1a-7127-8629-c4c300822cba",
+   "title": "Doomsday Hunters",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-665e-72d1-a8b7-14008bd72432",
+   "title": "Hand of Doom",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-6e4c-7373-bd6b-00a9cf6d7211",
+   "title": "These Doomed Isles",
+   "type": "game"
+  },
+  {
+   "id": "018d937e-f504-7235-bab8-ca00740d9cef",
+   "title": "Doom & Destiny Advanced",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-1d0f-71a3-8a51-92fec56d257e",
+   "title": "Lew Pulsipher's Doomstar",
+   "type": "game"
+  },
+  {
+   "id": "018d937e-ff0d-701a-933e-1063876f786f",
+   "title": "Doomed'n Damned",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-3ebb-73ab-89a3-519daba5a60b",
+   "title": "Scoot Kaboom and the Tomb of Doom",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-3427-703c-85b4-9c25431d0fb3",
+   "title": "Terracotta - Shards of Doom",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-5037-71a7-a723-519c3ad637df",
+   "title": "Last Kids on Earth and the Staff of Doom",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-43e8-737d-b645-4544ced48fd2",
+   "title": "Tunnel of Doom",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-1af6-7323-aa5a-8d52246ad768",
+   "title": "BRINK: Doom®/Psycho Combo Pack",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6cc2-72db-97ce-ffff9379eb36",
+   "title": "Doomed Lands",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-6813-70e7-a7ec-ecb3c01bddb2",
+   "title": "Doomsday Paradise",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-0a1f-70fd-b16a-3fb2f9da916a",
+   "title": "WE ARE DOOMED",
+   "type": "game"
+  },
+  {
+   "id": "019ea330-ae3a-710d-9158-8613939e8870",
+   "title": "DOOM: The Dark Ages | Revelations",
+   "type": "dlc"
+  },
+  {
+   "id": "01951f0d-ef73-72ba-9bdf-c73d872cf5f9",
+   "title": "Neverwinter Nights: Doom of Icewind Dale",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-45e1-7127-99dc-96957aa21915",
+   "title": "Ski Doom VR",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-5ef8-73ae-8a28-d78fe2429af5",
+   "title": "Darold The Doomer: Psychedelic Lucid Dreams",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-5e29-7121-94dc-d419a6106c2a",
+   "title": "DOOM TOMB",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-08b7-7354-b388-dffbc307008d",
+   "title": "Fighting Fantasy: The Forest of Doom",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-5e36-7053-bfff-da5d1315647f",
+   "title": "Doomed to Hell",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-4388-7270-a9f7-a8d492b4c4b5",
+   "title": "Doomtrooper CCG",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-72ee-7343-8360-760aaf4c4fb8",
+   "title": "Shroom & Doom",
+   "type": "game"
+  },
+  {
+   "id": "019ebccf-f7df-70bb-8303-1aa352910dac",
+   "title": "DOOM Eternal: Complete Cosmetic Pack",
+   "type": "dlc"
+  },
+  {
+   "id": "0194948b-ed23-7363-9478-353d29910b2e",
+   "title": "DOOM: The Dark Ages - Premium Edition",
+   "type": "game"
+  },
+  {
+   "id": "018e3479-d41e-738e-a701-9c5e5a3a78d6",
+   "title": "Find 101 Doomers",
+   "type": "game"
+  },
+  {
+   "id": "01920e32-d744-731f-8358-f53a2d5eeb13",
+   "title": "Armored of Doom",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-7b67-7314-a5bb-c8dc7035e4ee",
+   "title": "GuyzGamez A Nightmare on GuyGamez Street The Cursed Forest of Doom",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-3e4a-70fe-b4a5-93ca53c80201",
+   "title": "DOOM Soundtrack",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-4214-7307-8ddc-79961074fa47",
+   "title": "Doom & Destiny Worlds",
+   "type": "game"
+  }
+ ],
+ "Celeste": [
+  {
+   "id": "018d937f-1382-7004-b65b-e6adfce11377",
+   "title": "Celeste",
+   "type": "game"
+  },
+  {
+   "id": "018d937e-fa02-705e-9243-1b20ff987339",
+   "title": "Celeste Soundtrack",
+   "type": null
+  },
+  {
+   "id": "018d937f-3795-72c8-ac74-754d47660245",
+   "title": "Celeste - Sora Extra Soundtrack",
+   "type": null
+  },
+  {
+   "id": "019b3283-5cc5-72c2-a29f-0d7c5d83b596",
+   "title": "Trombone Champ: Celeste Song Pack",
+   "type": "dlc"
+  },
+  {
+   "id": "0195d813-121c-7092-864d-e1da354d03a5",
+   "title": "Rift of the NecroDancer: Celeste - \"Resurrections\"",
+   "type": "dlc"
+  },
+  {
+   "id": "0195d813-120c-726d-ad0d-f06036080bb2",
+   "title": "Rift of the NecroDancer: Celeste - \"Confronting Myself\"",
+   "type": "dlc"
+  },
+  {
+   "id": "0195d813-11f7-727e-bada-573740aef761",
+   "title": "Rift of the NecroDancer: Celeste - \"Reach for the Summit\"",
+   "type": "dlc"
+  },
+  {
+   "id": "0195d813-11e8-73e5-bcf2-256943543f7d",
+   "title": "Rift of the NecroDancer: Celeste - \"Scattered and Lost\"",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-6369-72ac-b6c0-a74a3dc9fffd",
+   "title": "Timewell: Trail of Celestes",
+   "type": "game"
+  },
+  {
+   "id": "019b3759-b1ad-715f-8643-64b6548589b4",
+   "title": "Trombone Champ: Unflattened - Celeste Song Pack",
+   "type": "dlc"
+  },
+  {
+   "id": "019e512a-97b8-73fd-aa66-117bf7f14b94",
+   "title": "Shovel Knight: Treasure Trove + Celeste",
+   "type": "package"
+  },
+  {
+   "id": "019b3286-212c-713b-9de6-48ba935aaf68",
+   "title": "UNDERTALE + DELTARUNE, Celeste, & Pizza Tower Song Packs",
+   "type": "package"
+  },
+  {
+   "id": "019b2ef8-f5ca-7023-9879-17523d85b565",
+   "title": "Celeste Blue Wizard Luna",
+   "type": "game"
+  },
+  {
+   "id": "0195d813-1a07-7278-9e77-5a095daac627",
+   "title": "Rift + Celeste + Celeste Music Pack",
+   "type": "package"
+  },
+  {
+   "id": "0195d813-19f9-7198-9ab3-9e9124db3416",
+   "title": "Rift of the NecroDancer: Celeste Music Pack",
+   "type": "dlc"
+  },
+  {
+   "id": "01946b06-a1ec-7256-98c4-eea64635cc8a",
+   "title": "Celeste & Luna: Hentai Puzzle 18+",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-0685-7214-ad13-0ebaa64b388a",
+   "title": "Celeste + OST",
+   "type": "package"
+  }
+ ],
+ "Spiderman": [
+  {
+   "id": "018d937f-2d56-729b-ab98-fae5695ea305",
+   "title": "Spiderman Print Studio",
+   "type": null
+  }
+ ],
+ "Witcher 3": [
+  {
+   "id": "018d937f-1212-7232-b23f-a046f6fd4a57",
+   "title": "The Witcher 3: Wild Hunt",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-2299-7120-be99-fa7f8eeb8018",
+   "title": "The Witcher 3: Wild Hunt - Blood and Wine",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-3a29-72b9-888f-ecbf55a28e80",
+   "title": "The Witcher 3: Wild Hunt - Complete Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d9589-dd61-71cb-b314-c914cb0d2b0e",
+   "title": "The Witcher 3: Wild Hunt - Hearts of Stone",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-0c8a-7023-9e85-caef8e29ae36",
+   "title": "The Witcher 3: Wild Hunt - Expansion Pass",
+   "type": "dlc"
+  },
+  {
+   "id": "01a03a82-7e26-73fa-8e14-8bf53f4c244e",
+   "title": "The Witcher 3: Wild Hunt — Songs of the Past",
+   "type": "dlc"
+  },
+  {
+   "id": "018ee693-2447-73f8-924d-bf7107e2a465",
+   "title": "The Witcher 3 REDkit",
+   "type": null
+  },
+  {
+   "id": "018d937f-4014-70e5-8072-73bc472d2620",
+   "title": "The Witcher 3: Wild Hunt - Blood and Wine Soundtrack",
+   "type": null
+  },
+  {
+   "id": "018d937f-4014-70e5-8072-73bc4665854c",
+   "title": "The Witcher 3: Wild Hunt - Hearts of Stone Soundtrack",
+   "type": null
+  },
+  {
+   "id": "018d937f-3e4e-70ea-8d70-5952eba0fd14",
+   "title": "The Witcher 3: Wild Hunt Soundtrack",
+   "type": null
+  },
+  {
+   "id": "01a0ef19-3337-721c-9871-e87fdd9ab8e9",
+   "title": "The Witcher 3: Wild Hunt — Remastered - Nintendo Switch 2",
+   "type": null
+  },
+  {
+   "id": "01933f37-e34f-7041-ada4-4f59a7fcb8e3",
+   "title": "The Witcher Volume 3: Curse of Crows",
+   "type": null
+  }
+ ],
+ "xyzzy nonexistent game": [
+  {
+   "id": "018d937e-f9f4-7235-b38c-bfdcb325b577",
+   "title": "Tomb Raider Game of the Year Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-2077-7336-b125-3cd96189f579",
+   "title": "Batman Arkham City Game of the Year Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-083f-702e-9c07-4813977240a8",
+   "title": "Batman: Arkham Asylum Game of the Year Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-2ee8-7008-bda8-5bc6436d8ae3",
+   "title": "Nier: Automata™ Game Of The Yorha Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-2237-7301-a0d8-7074fb89a8d0",
+   "title": "Fallout: A Post Nuclear Role Playing Game",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-0fe0-7262-b4f9-cb0c7881d33b",
+   "title": "Borderlands: Game of the Year Enhanced",
+   "type": "package"
+  },
+  {
+   "id": "018d937f-23f0-711e-ad7c-2cc0829d75f9",
+   "title": "Fallout 3: Game of the Year Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-24b7-731c-a789-8307ae059efa",
+   "title": "Deus Ex: Game of the Year Edition",
+   "type": "game"
+  },
+  {
+   "id": "01965e11-4451-728c-9e90-89e3d49f5868",
+   "title": "The Elder Scrolls IV: Oblivion® Game of the Year Edition (2009)",
+   "type": "game"
+  },
+  {
+   "id": "018d937e-f4b1-72a4-8b98-1b65a43ec5bb",
+   "title": "The Elder Scrolls III: Morrowind® Game of the Year Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d937e-f4d7-7087-b8f9-3e7dcbe5dea3",
+   "title": "Middle-earth™: Shadow of Mordor™ Game of the Year Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-039b-724c-b8fa-1766fbdf4ea9",
+   "title": "Fallout 2: A Post Nuclear Role Playing Game",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-0e5f-720d-9312-46b065c9690c",
+   "title": "Plants vs Zombies Game of the Year Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d954a-fe7a-72c0-b0d0-cdf5ab23e2f1",
+   "title": "The LEGO® NINJAGO® Movie Video Game",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-21c2-736b-98b6-7318743fb38a",
+   "title": "Stick Fight: The Game",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-03e9-70b1-aa25-6a314c8629d4",
+   "title": "Stealth Inc. 2: A Game of Clones",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-1608-721b-8ee7-f4902fe8d447",
+   "title": "Game Dev Tycoon",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-2b46-722b-bb42-3b8380f43dbe",
+   "title": "Duck Game",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-15a8-72a7-b5fa-c0d7f971214f",
+   "title": "Untitled Goose Game",
+   "type": "game"
+  },
+  {
+   "id": "018d937e-f092-7290-8d47-4870f06e148a",
+   "title": "Dragon Age™: Inquisition - Game of the Year Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-2b35-72da-b450-6bde20e7c8cb",
+   "title": "Niche - a genetics survival game",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-067a-7059-a878-b58f7b23d2f3",
+   "title": "GWENT: THE WITCHER CARD GAME",
+   "type": "game"
+  },
+  {
+   "id": "018d937e-ffae-724c-b760-ce96d86897fe",
+   "title": "GameGuru",
+   "type": null
+  },
+  {
+   "id": "018d937f-4ef1-7378-a220-20af30c0c07d",
+   "title": "Lil Gator Game",
+   "type": "game"
+  },
+  {
+   "id": "018d937e-efcd-7019-ab01-1031c16b8f16",
+   "title": "Borderlands 2: Sir Hammerlock's Big Game Hunt",
+   "type": "dlc"
+  },
+  {
+   "id": "018d937f-66a3-7379-b454-b05fe2d4bed0",
+   "title": "Gamedec - Definitive Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-2d22-70ed-b75c-8f4fb91b668e",
+   "title": "Zero Escape: The Nonary Games",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-3fde-7244-99f5-9d30f564d657",
+   "title": "There is no game : Wrong dimension",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-381a-729a-8879-6fd6a4b4e02e",
+   "title": "Fun with Ragdolls: The Game",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-2b51-7196-8ac3-c7270c8879c2",
+   "title": "Treasure Adventure Game",
+   "type": "game"
+  },
+  {
+   "id": "018d937e-ff52-71d7-b9cf-f7be380259a1",
+   "title": "Fallout 4 Game of the Year Edition",
+   "type": "game"
+  },
+  {
+   "id": "01965e8c-e63c-7057-80ee-d17068c8d75f",
+   "title": "The Elder Scrolls IV: Oblivion® Game of the Year Edition Deluxe (2009)",
+   "type": "package"
+  },
+  {
+   "id": "018d937f-11df-72e6-ba26-d491aceeb639",
+   "title": "Indie Game: The Movie",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-1afa-71f6-91f7-6c7cd0971fdf",
+   "title": "ATOM RPG: Post-apocalyptic indie game",
+   "type": "game"
+  },
+  {
+   "id": "018d937e-fa4a-73f3-a0d5-5dff3462c4a2",
+   "title": "Cognition: An Erica Reed Thriller - Game of the Year Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d937e-f4bb-70a2-b0bf-9dcdd05a527f",
+   "title": "You Have to Win the Game",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-0c71-705b-a891-e8f1092fd8b6",
+   "title": "Rising Storm Game of the Year Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d937e-fd2d-7387-bae1-a11c05a69172",
+   "title": "BADLAND: Game of the Year Edition",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-2cfc-7386-8853-605610c42110",
+   "title": "Retro Game Crunch",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-2a19-71c3-bf5d-781ec4e79b2e",
+   "title": "LEGO Pirates of the Caribbean: The Video Game",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-5940-7371-8c1e-be3ca6b47f52",
+   "title": "Crab Game",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-13d5-7116-9421-407fca73adbd",
+   "title": "Mysterium: a Psychic Clue Game",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-0bee-7058-9922-77c7666e760a",
+   "title": "Colony Ship: A Post-Earth Role Playing Game",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-25e5-7028-8902-8048ef921a47",
+   "title": "The Witcher Adventure Game",
+   "type": "game"
+  },
+  {
+   "id": "018d937e-fd68-72ed-b71b-1f1156b1a562",
+   "title": "Mad Games Tycoon",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-19a7-7063-9065-b708425716c5",
+   "title": "Blue Estate The Game",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-08c4-727d-aa8f-fb688cc80458",
+   "title": "Darkest Hour: A Hearts of Iron Game",
+   "type": "game"
+  },
+  {
+   "id": "01949392-236a-7353-8526-2c1d6af48d20",
+   "title": "Meadow - A Shelter Game",
+   "type": "game"
+  },
+  {
+   "id": "018d937f-0c0b-7182-9c9c-f0291694fe28",
+   "title": "Box: The Game",
+   "type": "game"
+  },
+  {
+   "id": "018d937e-fdb6-72b6-863e-896fa89e26b9",
+   "title": "Indie Game: The Movie Special Edition",
+   "type": "dlc"
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-is-there-any-deal"
+version = "0.1.0"
+description = "An MCP server for checking PC game deals and keeping a local wishlist, using IsThereAnyDeal."
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]>=2.3,<3",
+    "aiohttp",
+    "aiosqlite",
+    "python-dotenv",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+mcp-is-there-any-deal = "deals_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
