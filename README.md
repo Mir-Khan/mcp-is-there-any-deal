@@ -1,8 +1,102 @@
 # mcp-is-there-any-deal
 
-An MCP server that lets Claude look up PC game prices on [IsThereAnyDeal](https://isthereanydeal.com) and manage a local wishlist, in order to answer questions such as "is anything on my wishlist on sale?" or "should I buy Celeste now or wait?". The price code and the deal rule are ported from `discord-deal-bot`, although this server keeps its own SQLite wishlist and does not touch the bot's database.
+[![Tests](https://github.com/Mir-Khan/mcp-is-there-any-deal/actions/workflows/tests.yml/badge.svg)](https://github.com/Mir-Khan/mcp-is-there-any-deal/actions/workflows/tests.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)
 
-It is built on version 2 of the official Python MCP SDK, where the class that used to be called `FastMCP` is now `MCPServer`.
+An [MCP](https://modelcontextprotocol.io) server that lets Claude, or any other MCP client, look up PC game prices on [IsThereAnyDeal](https://isthereanydeal.com) and keep a wishlist of games with a price target for each one. It can answer questions such as "is anything on my wishlist on sale?", "what is the lowest Hollow Knight has ever been?" or "should I buy Celeste now or wait?", and an optional scheduled job posts new deals to a Discord channel.
+
+```text
+You:     Add Resident Evil 4 to my wishlist, but only tell me about it under $15.
+Claude:  Several games match "Resident Evil 4". Which one did you mean?
+           ( ) Resident Evil 4 (2005)
+           ( ) Resident Evil 4 (2023)
+           (•) Resident Evil 4 (2023) - Gold Edition
+           ( ) Resident Evil 4 Ultimate HD Edition
+Claude:  Added Resident Evil 4 (2023) - Gold Edition with a $15 price cap. It is $13.75 at
+         GamesPlanet right now, 72% off, so it already meets your target.
+```
+
+## Highlights
+
+- **Built on the MCP Python SDK version 2**, using all three MCP primitives (tools, resources and prompts), along with elicitation, which lets a tool stop and ask the user a question partway through a call.
+- **Search that resolves franchise names.** IsThereAnyDeal's own search is fuzzy, so for "Final Fantasy" it lists XV and the VII remake first and the original game 24th. The server re-ranks the results by comparing normalized titles, so case, punctuation, accents, trademark symbols and Roman numerals do not matter ("final fantasy 7" matches "FINAL FANTASY VII"), and a single exact match is used directly.
+- **It asks rather than guesses.** When a name is ambiguous, such as "Resident Evil 4" (2005 and 2023) or "Halo", the user picks from a list in clients that support elicitation, and the model asks in the conversation in clients that do not. A query with no close match is reported as such, instead of returning unrelated games.
+- **A deal rule that ignores fake sales.** A price only counts as a sale when it is below the lowest regular price at any shop, so "50% off" from an inflated regular price is ignored, and the minimum discount the user sets is measured the same way.
+- **Discord alerts with no repeats.** The alert job remembers what it has sent, so each deal is posted once, with one reminder before it ends, and a failed request never causes a repeat alert.
+- **Tested in depth.** The test suite of more than 170 tests runs without a network connection. It covers the deal rule, title matching against saved real search results, the database, the API client against a local fake server (including timeouts, error pages and rate limits, and checking that the API key never leaks into errors or logs), and every tool, resource and prompt through an in-process MCP client.
+
+## Requirements
+
+- Python 3.11 or newer.
+- A free IsThereAnyDeal API key, from https://isthereanydeal.com/apps/my/.
+- An MCP client, such as [Claude Code](https://claude.com/claude-code) or Claude Desktop.
+
+The server runs on Windows, macOS and Linux, and the tests run on all three in CI.
+
+## Installation
+
+**macOS and Linux:**
+
+```bash
+git clone https://github.com/Mir-Khan/mcp-is-there-any-deal.git
+cd mcp-is-there-any-deal
+python3 -m venv .venv
+.venv/bin/python -m pip install -e ".[dev]"
+cp .env.example .env    # then add your ITAD_API_KEY
+```
+
+**Windows (PowerShell):**
+
+```powershell
+git clone https://github.com/Mir-Khan/mcp-is-there-any-deal.git
+cd mcp-is-there-any-deal
+python -m venv .venv
+.venv\Scripts\python.exe -m pip install -e ".[dev]"
+copy .env.example .env    # then add your ITAD_API_KEY
+```
+
+### Configuration
+
+| Setting | Description |
+|---|---|
+| `ITAD_API_KEY` | Your IsThereAnyDeal API key (required). |
+| `DEFAULT_COUNTRY` | The two-letter country used for prices when none is given, such as `US` or `GB` (default `US`). |
+| `DEALS_DB_PATH` | Where the wishlist is stored (default `~/.deals-mcp/wishlist.db`). |
+| `DISCORD_WEBHOOK_URL` | Only needed for deal alerts. |
+
+Settings are read from the environment and then from the first `.env` file that sets them, out of the file named by `DEALS_ENV_FILE`, the project folder's `.env`, and `~/.deals-mcp/.env`. The current directory is not used, since the client may start the server from anywhere.
+
+## Connecting a client
+
+The server uses the stdio transport, so the client starts it as a local process. In the commands below, replace `/path/to/mcp-is-there-any-deal` with the folder you cloned into, and on Windows use `.venv\Scripts\python.exe` in place of `.venv/bin/python`.
+
+**Claude Code:**
+
+```bash
+claude mcp add deals --scope user -- /path/to/mcp-is-there-any-deal/.venv/bin/python -m deals_mcp.server
+```
+
+Then run `/mcp` inside Claude Code in order to check that it is connected.
+
+**Claude Desktop:** open Settings, then Developer, then Edit Config (the file is `~/Library/Application Support/Claude/claude_desktop_config.json` on macOS and `%APPDATA%\Claude\claude_desktop_config.json` on Windows), add the following, and restart the app:
+
+```json
+{
+  "mcpServers": {
+    "deals": {
+      "command": "/path/to/mcp-is-there-any-deal/.venv/bin/python",
+      "args": ["-m", "deals_mcp.server"]
+    }
+  }
+}
+```
+
+On Windows, write the path with doubled backslashes, for example `"C:\\Users\\you\\mcp-is-there-any-deal\\.venv\\Scripts\\python.exe"`.
+
+**Other clients:** any client that supports local (stdio) MCP servers, such as VS Code or Cursor, can use the same command and arguments.
+
+Since the server runs on your computer, it cannot be added to the claude.ai website or the mobile apps, which only connect to MCP servers hosted on the internet.
 
 ## What it exposes
 
@@ -10,103 +104,66 @@ It is built on version 2 of the official Python MCP SDK, where the class that us
 
 | Tool | Description |
 |---|---|
-| `search_game(query, limit)` | Searches ITAD by title and returns game ids, which the other tools need. |
+| `search_game(query, limit, ask_if_ambiguous)` | Searches by title and returns ranked results with a match level, asking the user to choose when the name is ambiguous. |
 | `get_current_deals(game_id, country)` | Returns the current price at every shop, along with whether the cheapest offer is a real sale. |
 | `get_historical_low(game_id, country)` | Returns the all-time low price and the current best price. |
-| `add_to_wishlist(game_id, title, country, min_discount_percent, max_price)` | Adds or replaces a wishlist entry. |
-| `remove_from_wishlist(game_id_or_title)` | Removes an entry, matching by id or by title. |
+| `add_to_wishlist(game_id, title, country, min_discount_percent, max_price)` | Adds a game, or replaces its entry, with an optional minimum discount and price cap. |
+| `remove_from_wishlist(game_id_or_title)` | Removes a game, matching by id or by title. |
 | `list_wishlist()` | Lists the wishlist. |
-| `set_thresholds(game_id_or_title, min_discount_percent, max_price)` | Changes the thresholds of an entry; a `max_price` of 0 removes the cap. |
-| `check_wishlist_deals()` | Checks the whole wishlist and returns the games that are on sale and that meet their thresholds. |
-
-A deal only counts when its price is below the lowest regular price across all shops, which is the same "market MSRP" rule that the bot uses, so that a "sale" which still costs more than the normal price somewhere else is ignored. The minimum discount threshold is also measured against that lowest regular price (reported as `market_discount_percent`), rather than against the shop's own discount, which can be inflated by a high regular price. Games that cannot be checked, for example because ITAD no longer knows their id or a request failed, are listed under `not_checked` with the reason and are not counted in `games_checked`.
-
-Game ids must be ITAD ids (UUIDs, as returned by `search_game`); they are trimmed and lowercased, and anything else, such as a title, is rejected.
-
-### Searching and clarification
-
-IsThereAnyDeal's own search order is fuzzy, so for "Final Fantasy" it lists XV and the VII remake first and the original game 24th. `search_game` therefore requests 50 results and re-ranks them with `matching.py`, which compares titles after normalizing case, punctuation, accents, trademark symbols, and Roman numerals against numbers (so "final fantasy 7" matches "FINAL FANTASY VII"). Each result carries a match level: `exact`, `variant`, `starts_with`, `contains`, or `weak`.
-
-- A single exact match is used without asking, for example "Final Fantasy" resolves to FINAL FANTASY and not a sequel.
-- When the search is ambiguous, such as "Resident Evil 4" (2005 and 2023) or "Halo", the server asks the user to pick a game through MCP elicitation, which shows a form in clients that support it. In clients that do not, or when the user dismisses the form, the result has `needs_clarification: true`, and the model is told to ask in the conversation.
-- When nothing matches closely, such as a misspelling or a nonsense query, the user is not offered a list of unrelated games, and the result says so and suggests another spelling.
-
-The question is asked through the SDK's `Resolve` and `Elicit` mechanism, which works with both the older protocol (a direct request partway through the call) and the 2026-07-28 protocol (the client answers and retries the call).
+| `set_thresholds(game_id_or_title, min_discount_percent, max_price)` | Changes a game's minimum discount or price cap; a `max_price` of 0 removes the cap. |
+| `check_wishlist_deals()` | Checks the whole wishlist, and returns the games that are on sale and meet their thresholds, along with any games that could not be checked and the reason. |
 
 **Resources:** `wishlist://items` (the whole wishlist as JSON) and `wishlist://items/{game_id}` (a single entry).
 
-**Prompts:** `weekly_deal_summary` and `should_i_buy(title)`.
+**Prompts:** `weekly_deal_summary` (rank the deals on the wishlist) and `should_i_buy(title)` (compare the current price with the all-time low and recommend buying now or waiting).
 
-## Setup
+Game ids are IsThereAnyDeal ids, which `search_game` returns; anything else, such as a title passed by mistake, is rejected.
 
-```powershell
-python -m venv .venv
-.venv\Scripts\python.exe -m pip install -e ".[dev]"
-copy .env.example .env   # then fill in ITAD_API_KEY
+## Deal alerts (optional)
+
+An MCP server only runs while a client has it open and cannot message anyone on its own, so alerts come from a separate command, `python -m deals_mcp.alerts`, which is meant to run on a schedule. It uses the same wishlist and the same deal check as the `check_wishlist_deals` tool, and posts each new deal to a Discord channel.
+
+Each deal is posted once. A game is posted again when its price drops, when a different sale or shop becomes the best deal, or when a sale that had ended comes back, and a deal that ends within 8 hours gets one "ending soon" reminder.
+
+1. In Discord, open the channel's settings, then Integrations, Webhooks, New Webhook, and copy the URL.
+2. Add it to `.env` as `DISCORD_WEBHOOK_URL=...`. Anyone with this URL can post to the channel, so keep it private.
+3. Send a test message with `.venv/bin/python -m deals_mcp.alerts --test`, and see what would be posted, without posting it, with `--dry-run`.
+4. Schedule it:
+   - **Windows:** run `.\scripts\register-alerts-task.ps1`, which creates a Task Scheduler task that runs every 6 hours (`-Hours 3` changes this, and `-Remove` deletes the task). It uses `pythonw.exe`, so no window opens.
+   - **macOS and Linux:** add a cron entry with `crontab -e`, for example to run every 6 hours:
+
+     ```text
+     0 */6 * * * /path/to/mcp-is-there-any-deal/.venv/bin/python -m deals_mcp.alerts
+     ```
+
+     On macOS, cron may need Full Disk Access in System Settings, under Privacy and Security, if the project is in a protected folder such as Documents; a `launchd` agent is the alternative.
+
+Each run is logged to `~/.deals-mcp/alerts.log`. The command exits with 0 on success, 1 when the wishlist check fails, and 2 when Discord cannot be reached or the webhook is not set.
+
+## Development
+
+```bash
+.venv/bin/python -m pytest                                                     # run the tests
+npx @modelcontextprotocol/inspector .venv/bin/python -m deals_mcp.server        # call tools by hand
 ```
 
-An API key can be created at https://isthereanydeal.com/apps/my/. Settings are read from the first of these files that sets them: the file named by `DEALS_ENV_FILE`, the project root's `.env` (for an editable install), and `~/.deals-mcp/.env` (which also works for a normal install). The current directory is not used, since the client may start the server from anywhere. `DEFAULT_COUNTRY` must be a two-letter code. The wishlist is stored at `~/.deals-mcp/wishlist.db` unless `DEALS_DB_PATH` is set.
+The [MCP Inspector](https://github.com/modelcontextprotocol/inspector) is useful for calling tools, reading resources and rendering prompts without a model. The SDK's own `mcp dev` command is not used, because it always starts the server through `uv`.
 
-## Running and testing
+### Project layout
 
-```powershell
-.venv\Scripts\python.exe -m pytest   # unit tests and in-process MCP tests (no network)
-npx @modelcontextprotocol/inspector .venv\Scripts\python.exe -m deals_mcp.server   # MCP Inspector
-```
-
-The Inspector is used for calling tools, reading resources and rendering prompts by hand. The SDK's own `mcp dev` command is not used here, because it always launches the server through `uv`, which this setup does not need.
-
-## Connecting a client
-
-The server uses the stdio transport, so the client starts it as a subprocess.
-
-**Claude Code:**
-
-```powershell
-claude mcp add deals --scope user -- C:\Users\mirkh\Code\mcp-project\.venv\Scripts\python.exe -m deals_mcp.server
-```
-
-Then run `/mcp` inside Claude Code in order to check that it is connected.
-
-**Claude Desktop:** add the following to `%APPDATA%\Claude\claude_desktop_config.json` and restart the app:
-
-```json
-{
-  "mcpServers": {
-    "deals": {
-      "command": "C:\\Users\\mirkh\\Code\\mcp-project\\.venv\\Scripts\\python.exe",
-      "args": ["-m", "deals_mcp.server"]
-    }
-  }
-}
-```
-
-## Deal alerts
-
-An MCP server only runs while a client has it open, and it cannot message anyone by itself, so alerts come from a separate job, `python -m deals_mcp.alerts`, which is meant to run on a schedule. It uses the same wishlist and the same deal check as the `check_wishlist_deals` tool, and posts the deals to a Discord channel through a webhook.
-
-Each deal is alerted once. A game is alerted again when its price drops, when a different sale or shop becomes the best deal, or when a sale that had ended comes back, and a deal that ends within 8 hours gets one "ending soon" reminder. A game that could not be checked (for example because a request failed) keeps its state, so a temporary failure never causes a repeat alert.
-
-Setup:
-
-1. In Discord, open the channel's settings, then Integrations, Webhooks, New Webhook, and copy its URL.
-2. Add it to `.env` as `DISCORD_WEBHOOK_URL=...`. Anyone with this URL can post to the channel, so keep it out of git (`.env` is ignored).
-3. Check it with `.venv\Scripts\python.exe -m deals_mcp.alerts --test`, and see what would be sent with `--dry-run`.
-4. Schedule it with `.\scripts\register-alerts-task.ps1` (every 6 hours by default, `-Hours 3` to change it, `-Remove` to delete it). The task uses `pythonw.exe`, so no window opens, and it only runs while you are logged in to Windows.
-
-Each run is logged to `~/.deals-mcp/alerts.log`. The command exits with 0 on success, 1 when the wishlist check fails, and 2 when Discord cannot be reached or the webhook is not set, which Task Scheduler shows as the last run result.
-
-## Layout
-
-- `src/deals_mcp/server.py`: the `MCPServer` instance along with every tool, resource and prompt.
-- `src/deals_mcp/alerts.py`: the scheduled alert job and the Discord webhook sender.
-- `src/deals_mcp/deal_check.py`: the wishlist check, shared by the MCP tool and the alert job.
-- `src/deals_mcp/config.py`: settings from the environment and `.env` files.
+- `src/deals_mcp/server.py`: the MCP server, with every tool, resource and prompt.
+- `src/deals_mcp/matching.py`: title normalization and the ranking of search results.
 - `src/deals_mcp/itad.py`: the IsThereAnyDeal API client.
-- `src/deals_mcp/deal_logic.py`: pure functions for deciding whether a price is a deal.
+- `src/deals_mcp/deal_logic.py`: pure functions that decide whether a price is a real sale.
+- `src/deals_mcp/deal_check.py`: the wishlist check, shared by the MCP tool and the alert job.
 - `src/deals_mcp/db.py`: the SQLite wishlist, and the record of which alerts were sent.
+- `src/deals_mcp/alerts.py`: the scheduled alert job and the Discord webhook sender.
+- `src/deals_mcp/config.py`: settings from the environment and `.env` files.
 - `scripts/register-alerts-task.ps1`: registers the alert job with Windows Task Scheduler.
-- `src/deals_mcp/matching.py`: title normalization and ranking for search results.
-- `tests/fixtures/itad_search.json`: real ITAD search results for several franchise queries, so that the ranking tests run against actual titles without a network connection. Regenerate it if ITAD's catalogue changes enough to break those tests.
+- `tests/fixtures/itad_search.json`: real IsThereAnyDeal search results for several franchise queries, so that the ranking tests run against actual titles without a network connection.
 
-Logging goes to stderr, because stdout is used by the stdio transport, so a stray `print()` in the server will break the connection.
+The server logs to stderr, because stdout carries the stdio transport's messages, so a stray `print()` in the server would break the connection.
+
+## License
+
+[MIT](LICENSE)
