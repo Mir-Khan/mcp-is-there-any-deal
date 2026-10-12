@@ -81,12 +81,31 @@ Then run `/mcp` inside Claude Code in order to check that it is connected.
 }
 ```
 
+## Deal alerts
+
+An MCP server only runs while a client has it open, and it cannot message anyone by itself, so alerts come from a separate job, `python -m deals_mcp.alerts`, which is meant to run on a schedule. It uses the same wishlist and the same deal check as the `check_wishlist_deals` tool, and posts the deals to a Discord channel through a webhook.
+
+Each deal is alerted once. A game is alerted again when its price drops, when a different sale or shop becomes the best deal, or when a sale that had ended comes back, and a deal that ends within 8 hours gets one "ending soon" reminder. A game that could not be checked (for example because a request failed) keeps its state, so a temporary failure never causes a repeat alert.
+
+Setup:
+
+1. In Discord, open the channel's settings, then Integrations, Webhooks, New Webhook, and copy its URL.
+2. Add it to `.env` as `DISCORD_WEBHOOK_URL=...`. Anyone with this URL can post to the channel, so keep it out of git (`.env` is ignored).
+3. Check it with `.venv\Scripts\python.exe -m deals_mcp.alerts --test`, and see what would be sent with `--dry-run`.
+4. Schedule it with `.\scripts\register-alerts-task.ps1` (every 6 hours by default, `-Hours 3` to change it, `-Remove` to delete it). The task uses `pythonw.exe`, so no window opens, and it only runs while you are logged in to Windows.
+
+Each run is logged to `~/.deals-mcp/alerts.log`. The command exits with 0 on success, 1 when the wishlist check fails, and 2 when Discord cannot be reached or the webhook is not set, which Task Scheduler shows as the last run result.
+
 ## Layout
 
 - `src/deals_mcp/server.py`: the `MCPServer` instance along with every tool, resource and prompt.
+- `src/deals_mcp/alerts.py`: the scheduled alert job and the Discord webhook sender.
+- `src/deals_mcp/deal_check.py`: the wishlist check, shared by the MCP tool and the alert job.
+- `src/deals_mcp/config.py`: settings from the environment and `.env` files.
 - `src/deals_mcp/itad.py`: the IsThereAnyDeal API client.
 - `src/deals_mcp/deal_logic.py`: pure functions for deciding whether a price is a deal.
-- `src/deals_mcp/db.py`: the SQLite wishlist.
+- `src/deals_mcp/db.py`: the SQLite wishlist, and the record of which alerts were sent.
+- `scripts/register-alerts-task.ps1`: registers the alert job with Windows Task Scheduler.
 - `src/deals_mcp/matching.py`: title normalization and ranking for search results.
 - `tests/fixtures/itad_search.json`: real ITAD search results for several franchise queries, so that the ranking tests run against actual titles without a network connection. Regenerate it if ITAD's catalogue changes enough to break those tests.
 

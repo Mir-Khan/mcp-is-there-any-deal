@@ -19,6 +19,7 @@ dev = ["pytest"]
 
 [project.scripts]
 mcp-is-there-any-deal = "deals_mcp.server:main"
+mcp-is-there-any-deal-alerts = "deals_mcp.alerts:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

@@ -13,7 +13,7 @@ import pytest
 from mcp import Client
 from mcp_types import ElicitResult
 
-from deals_mcp import server
+from deals_mcp import config, server
 from deals_mcp.itad import ITADClient, ITADError
 
 pytestmark = pytest.mark.anyio
@@ -599,17 +599,17 @@ async def test_skipped_games_are_still_reported_when_every_batch_fails(client, f
 
 
 async def test_price_requests_run_a_few_at_a_time(client, fake_itad, monkeypatch):
-    monkeypatch.setattr(server, "PRICES_BATCH_SIZE", 1)
+    monkeypatch.setattr(server.deal_check, "PRICES_BATCH_SIZE", 1)
     fake_itad.price_delay = 0.02
     for game_id in (HK, CELESTE, FULL_PRICE, FAKE_SALE, MARKET, DELISTED):
         await call(client, "add_to_wishlist", {"game_id": game_id, "title": game_id})
     await call(client, "check_wishlist_deals")
     assert len([c for c in fake_itad.calls if c[0] == "prices"]) == 6
-    assert 1 < fake_itad.max_in_flight <= server.PRICES_CONCURRENCY
+    assert 1 < fake_itad.max_in_flight <= server.deal_check.PRICES_CONCURRENCY
 
 
 async def test_large_wishlists_are_split_into_batches(client, fake_itad, monkeypatch):
-    monkeypatch.setattr(server, "PRICES_BATCH_SIZE", 2)
+    monkeypatch.setattr(server.deal_check, "PRICES_BATCH_SIZE", 2)
     for game_id in (HK, CELESTE, FULL_PRICE, FAKE_SALE, MARKET):
         await call(client, "add_to_wishlist", {"game_id": game_id, "title": game_id})
     report = await call(client, "check_wishlist_deals")
@@ -722,8 +722,8 @@ def test_search_cache_drops_the_oldest_entry_when_full():
 
 def test_env_file_candidates(monkeypatch, tmp_path):
     monkeypatch.setenv("DEALS_ENV_FILE", str(tmp_path / "custom.env"))
-    candidates = server.env_file_candidates()
+    candidates = config.env_file_candidates()
     assert candidates[0] == tmp_path / "custom.env"
     assert candidates[-1] == Path.home() / ".deals-mcp" / ".env"
     monkeypatch.delenv("DEALS_ENV_FILE")
-    assert len(server.env_file_candidates()) == 2
+    assert len(config.env_file_candidates()) == 2

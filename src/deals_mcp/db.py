@@ -28,6 +28,18 @@ CREATE TABLE IF NOT EXISTS wishlist (
 )
 """
 
+# The last deal that an alert was sent for, per game, so that the scheduled alert job only sends
+# one alert per deal (and at most one "ending soon" reminder) rather than one on every run.
+ALERTS_SCHEMA = """
+CREATE TABLE IF NOT EXISTS alerts_sent (
+    game_id TEXT PRIMARY KEY,
+    deal_url TEXT NOT NULL,
+    price REAL NOT NULL,
+    ending_alert_sent INTEGER NOT NULL DEFAULT 0,
+    sent_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+)
+"""
+
 COLUMNS = "game_id, game_title, country, min_discount_percent, max_price, added_at"
 
 
@@ -69,6 +81,7 @@ async def init_db(db_path: str) -> None:
     async with _connect(db_path) as conn:
         await conn.execute("PRAGMA journal_mode=WAL")
         await conn.execute(SCHEMA)
+        await conn.execute(ALERTS_SCHEMA)
         await conn.commit()
 
 
@@ -156,3 +169,39 @@ async def set_thresholds(db_path, game_id, min_discount_percent=None, max_price=
             row = await cursor.fetchone()
         await conn.commit()
     return dict(row) if row else None
+
+
+# ---- Alert state ----
+
+
+async def get_alert_states(db_path) -> dict[str, dict]:
+    async with _connect(db_path) as conn:
+        async with conn.execute("SELECT game_id, deal_url, price, ending_alert_sent, sent_at FROM alerts_sent") as cursor:
+            return {row["game_id"]: dict(row) for row in await cursor.fetchall()}
+
+
+async def record_alert(db_path, game_id, deal_url, price, ending_alert_sent: bool) -> None:
+    async with _connect(db_path) as conn:
+        await conn.execute(
+            "INSERT INTO alerts_sent (game_id, deal_url, price, ending_alert_sent) VALUES (?, ?, ?, ?) "
+            "ON CONFLICT(game_id) DO UPDATE SET deal_url = excluded.deal_url, price = excluded.price, "
+            "ending_alert_sent = excluded.ending_alert_sent, sent_at = CURRENT_TIMESTAMP",
+            (normalize_id(game_id), deal_url, price, int(ending_alert_sent)),
+        )
+        await conn.commit()
+
+
+async def forget_alerts(db_path, game_ids) -> None:
+    """Forget the alerts for these games, so that their next sale is alerted again."""
+    ids = [(normalize_id(g),) for g in game_ids]
+    if not ids:
+        return
+    async with _connect(db_path) as conn:
+        await conn.executemany("DELETE FROM alerts_sent WHERE game_id = ?", ids)
+        await conn.commit()
+
+
+async def forget_alerts_for_removed_games(db_path) -> None:
+    async with _connect(db_path) as conn:
+        await conn.execute("DELETE FROM alerts_sent WHERE game_id NOT IN (SELECT game_id FROM wishlist)")
+        await conn.commit()
